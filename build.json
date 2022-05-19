@@ -1,0 +1,16 @@
+{
+  "targets": [
+    "web",
+    "wechat-miniprogram"
+  ],
+  "wechat-miniprogram": {
+    "nativeConfig": {
+      "appid": "wx38800d0139103920",
+      "projectname": "rax-uart"
+    }
+  },
+  "webpack5": true,
+  "plugins": [
+    "build-plugin-fusion-mobile"
+  ]
+}
