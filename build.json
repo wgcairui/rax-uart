@@ -6,10 +6,12 @@
   "wechat-miniprogram": {
     "nativeConfig": {
       "appid": "wx38800d0139103920",
-      "projectname": "rax-uart"
+      "projectname": "rax-uart",
+      "miniprogramRoot": "./"
     }
   },
   "webpack5": true,
+  "publicPath": "public",
   "plugins": [
     "build-plugin-fusion-mobile"
   ]

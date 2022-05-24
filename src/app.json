@@ -5,11 +5,82 @@
       "source": "pages/Home/index"
     },
     {
-      "path": "pages/Home/login",
-      "source": "pages/Login/index"
+      "path": "pages/login",
+      "source": "pages/Login/index",
+      "window": {
+        "title": "登录"
+      }
+    },
+    {
+      "path": "pages/alarm",
+      "source": "pages/Alarm/index",
+      "window": {
+        "title": "告警信息"
+      }
+    },
+    {
+      "path": "pages/my",
+      "source": "pages/My/index",
+      "window": {
+        "title": "我的"
+      }
+    },
+    {
+      "path": "pages/dev/index",
+      "source": "pages/Dev/index",
+      "window": {
+        "title": "设备运行状态"
+      }
+    },
+    {
+      "path": "pages/subscribe/index",
+      "source": "pages/Subscribe/index",
+      "window": {
+        "title": "订阅长期告警"
+      }
+    },
+    {
+      "path": "pages/web/index",
+      "source": "pages/Web/index",
+      "window": {
+        "title": "内嵌网页"
+      }
+    },
+    {
+      "path": "pages/UserInfo/index",
+      "source": "pages/UserInfo/index",
+      "window": {
+        "title": "用户信息"
+      }
     }
   ],
   "window": {
-    "title": "百事服"
+    "title": "百事服",
+    "titleBarColor": "#487ed9"
+  },
+  "tabBar": {
+    "textColor": "#000",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/Home/index",
+        "text": "设备",
+        "icon": "Devs.png",
+        "selectedIconPath": "Devs_select.png"
+      },
+      {
+        "pagePath": "pages/Alarm/index",
+        "text": "告警",
+        "icon": "alarm.png",
+        "selectedIconPath": "alarm_select.png"
+      },
+      {
+        "pagePath": "pages/My/index",
+        "text": "我的",
+        "icon": "user.png",
+        "selectedIconPath": "user_select.png"
+      }
+    ]
   }
 }

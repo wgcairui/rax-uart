@@ -1,3 +1,4 @@
+/* eslint-disable new-cap */
 /* eslint-disable max-lines */
 // export const urlRequest = `http://127.0.0.1:9010`
 // export const urlWs = `ws://47.110.73.178:9011/ws`
@@ -721,6 +722,36 @@ class api {
   initTerminal(mac: string) {
     return this.fetch('root/initTerminal', { mac }, 'POST', 1000 * 60 * 5);
   }
+
+  /**
+ * a根据mac和pid获取挂载设备
+ * @param mac
+ * @param pid
+ * @returns
+ */
+  getTerminalPidProtocol(mac: string, pid: number | string) {
+    return this.fetch<Uart.TerminalMountDevs>('getTerminalPidProtocol', { mac, pid: Number(pid) });
+  }
+
+  /**
+ * 获取协议告警数据集合
+ * @param protocol
+ * @param type
+ * @param user
+ * @returns
+ */
+  getProtocolSetup<T = string>(
+    protocol: string,
+    type: Uart.ConstantThresholdType,
+    user?: string,
+  ) {
+    return this.fetch<{ sys: T[]; user: T[] }>('getProtocolSetup', {
+      protocol,
+      type,
+      user,
+    });
+  }
+
 
   /**
    * 获取code对应的base64QR图片数据
