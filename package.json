@@ -15,6 +15,7 @@
     "@alifd/meet": "^2.7.2",
     "@alifd/mobile-layout": "^1.0.5",
     "@uni/apis": "^1.1.10",
+    "dayjs": "^1.11.2",
     "rax": "^1.2.2",
     "rax-document": "^0.1.6",
     "rax-embed": "^1.2.2",

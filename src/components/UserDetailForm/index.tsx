@@ -4,10 +4,31 @@ import Text from 'rax-text';
 import ScrollView from 'rax-scrollview';
 import styles from './index.module.css';
 import Image from 'rax-image';
+import dayjs from 'dayjs';
 
 interface props {
   user: Uart.UserInfo;
 }
+
+interface detailProps{
+  name: string;
+  value?: string | number;
+}
+
+export const FormDetail: FC<detailProps> = ({ name, value }) => {
+  return (
+    <View className={styles.sectionItem} style={{ height: '107.5rpx' }}>
+      <View className={styles.sectionItemLeft}>
+        <Text className={styles.sectionItemLeftText}>{name}</Text>
+      </View>
+      <View className={styles.sectionItemRight}>
+        <Text className={styles.sectionItemRightText} numberOfLines={1}>
+          {value}
+        </Text>
+      </View>
+    </View>
+  );
+};
 
 const DetailForm: FC<props> = ({ user }) => {
   return (
@@ -17,66 +38,12 @@ const DetailForm: FC<props> = ({ user }) => {
       </View>
       <View className={styles.sectionTitle}>基本信息</View>
       <View className={styles.sectionContainer}>
-        <View className={styles.sectionItem} style={{ height: '107.5rpx' }}>
-          <View className={styles.sectionItemLeft}>
-            <Text className={styles.sectionItemLeftText}>昵称</Text>
-          </View>
-          <View className={styles.sectionItemRight}>
-            <Text className={styles.sectionItemRightText} numberOfLines={1}>
-              {user.name}
-            </Text>
-          </View>
-        </View>
-        <View className={styles.sectionItem} style={{ height: '107.5rpx' }}>
-          <View className={styles.sectionItemLeft}>
-            <Text className={styles.sectionItemLeftText}>账号</Text>
-          </View>
-          <View className={styles.sectionItemRight}>
-            <Text className={styles.sectionItemRightText} numberOfLines={1}>
-              {user.user}
-            </Text>
-          </View>
-        </View>
-        <View className={styles.sectionItem} style={{ height: '107.5rpx' }}>
-          <View className={styles.sectionItemLeft}>
-            <Text className={styles.sectionItemLeftText}>电话</Text>
-          </View>
-          <View className={styles.sectionItemRight}>
-            <Text className={styles.sectionItemRightText} numberOfLines={1}>
-              {user.tel}
-            </Text>
-          </View>
-        </View>
-        <View className={styles.sectionItem} style={{ height: '107.5rpx' }}>
-          <View className={styles.sectionItemLeft}>
-            <Text className={styles.sectionItemLeftText}>邮箱</Text>
-          </View>
-          <View className={styles.sectionItemRight}>
-            <Text className={styles.sectionItemRightText} numberOfLines={1}>
-              {user.mail}
-            </Text>
-          </View>
-        </View>
-        <View className={styles.sectionItem} style={{ height: '107.5rpx' }}>
-          <View className={styles.sectionItemLeft}>
-            <Text className={styles.sectionItemLeftText}>组织</Text>
-          </View>
-          <View className={styles.sectionItemRight}>
-            <Text className={styles.sectionItemRightText} numberOfLines={1}>
-              {user.company}
-            </Text>
-          </View>
-        </View>
-        <View className={styles.sectionItem} style={{ height: '107.5rpx' }}>
-          <View className={styles.sectionItemLeft}>
-            <Text className={styles.sectionItemLeftText}>创建时间</Text>
-          </View>
-          <View className={styles.sectionItemRight}>
-            <Text className={styles.sectionItemRightText} numberOfLines={1}>
-              {user.creatTime}
-            </Text>
-          </View>
-        </View>
+        <FormDetail name="昵称" value={user.name} />
+        <FormDetail name="账号" value={user.user} />
+        <FormDetail name="电话" value={user.tel} />
+        <FormDetail name="邮箱" value={user.mail} />
+        <FormDetail name="组织" value={user.company} />
+        <FormDetail name="创建时间" value={dayjs(user.creatTime).format('YYYY-MM-DD')} />
       </View>
       {/* <View className={styles.sectionTitle}>运营平台信息</View>
       <View className={styles.sectionContainer}>

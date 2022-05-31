@@ -47,10 +47,31 @@
       }
     },
     {
-      "path": "pages/UserInfo/index",
-      "source": "pages/UserInfo/index",
+      "path": "pages/My/userInfo",
+      "source": "pages/My/userInfo",
       "window": {
         "title": "用户信息"
+      }
+    },
+    {
+      "path": "pages/My/bind",
+      "source": "pages/My/bind",
+      "window": {
+        "title": "绑定设备"
+      }
+    },
+    {
+      "path": "pages/My/devManage",
+      "source": "pages/My/devManage",
+      "window": {
+        "title": "管理设备"
+      }
+    },
+    {
+      "path": "pages/My/alarmSetup",
+      "source": "pages/My/alarmSetup",
+      "window": {
+        "title": "告警配置"
       }
     }
   ],

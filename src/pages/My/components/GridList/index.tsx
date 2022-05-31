@@ -119,22 +119,22 @@ const DataCard: FC<props> = ({ hasWx, isTest }) => {
   const dataList: list[] = [
     {
       name: '我的信息',
-      onClick: '/pages/UserInfo/index',
+      onClick: '/pages/My/userInfo',
       iconUrl: 'https://besiv-uart.oss-cn-hangzhou.aliyuncs.com/wx-uart/%E7%94%A8%E6%88%B7.png',
     },
     {
       name: '管理设备',
-      onClick: '',
+      onClick: '/pages/My/devManage',
       iconUrl: 'https://besiv-uart.oss-cn-hangzhou.aliyuncs.com/wx-uart/1%E5%9F%BA%E7%A1%80%E7%AE%A1%E7%90%86.png',
     },
     {
       name: '绑定设备',
-      onClick: '',
+      onClick: '/pages/My/bind',
       iconUrl: 'https://besiv-uart.oss-cn-hangzhou.aliyuncs.com/wx-uart/icon2%E6%89%A9%E5%B1%95_%E6%89%AB%E4%B8%80%E6%89%AB%20pre.png',
     },
     {
       name: '告警设置',
-      onClick: '',
+      onClick: '/pages/My/alarmSetup',
       iconUrl: 'https://besiv-uart.oss-cn-hangzhou.aliyuncs.com/wx-uart/%E5%91%8A%E8%AD%A6.png',
     },
     {

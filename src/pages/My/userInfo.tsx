@@ -3,8 +3,8 @@ import { usePromise } from '@/common/hooks';
 import { Button } from '@alifd/meet';
 import { createElement, useState } from 'rax';
 import View from 'rax-view';
-import DetailForm from './components/DetailForm';
-import UserDetailForm from './components/UserDetailForm';
+import DetailForm from '../../components/DetailForm';
+import UserDetailForm from '../../components/UserDetailForm';
 import styles from './index.module.css';
 
 export default function () {

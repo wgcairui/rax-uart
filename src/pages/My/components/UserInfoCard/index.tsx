@@ -4,6 +4,7 @@ import Text from 'rax-text';
 import styles from './index.module.css';
 import api from '@/common/api';
 import { Avatar } from '@alifd/meet';
+import dayjs from 'dayjs';
 
 interface props{
   user: Uart.UserInfo;
@@ -36,7 +37,7 @@ const UserInfo: FC<props> = ({ user, fecth }) => {
         <View className={styles.detail}>
           <View className={styles.detailItem}>
             <Text className={styles.text}>创建日期: </Text>
-            <Text className={styles.number}>{user.creatTime}</Text>
+            <Text className={styles.number}>{dayjs(user.creatTime).format('YYYY-MM-DD')}</Text>
           </View>
         </View>
       </View>

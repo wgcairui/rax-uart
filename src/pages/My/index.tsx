@@ -12,9 +12,7 @@ export default function () {
   });
   return (
     <View className="My-page">
-      {/* User Info Card. */}
       <UserInfoCard user={user} fecth={fecth} />
-      {/* Grid List Block */}
       <GridList isTest={user.userGroup === 'test'} hasWx={Boolean(user.wxId)} />
     </View>
   );
